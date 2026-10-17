@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ttscnfix"
+version = "0.1.0"
+description = "Chinese TTS pronunciation fixes: polyphone same-sound substitutions + numeral reading normalization for edge-tts / qwen-tts (rule table distilled from real production misreads)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [{ name = "leonexu" }]
+keywords = ["tts", "edge-tts", "chinese", "polyphone", "多音字", "数字读法"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Chinese (Simplified)",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Multimedia :: Sound/Audio :: Speech",
+    "Topic :: Text Processing :: Linguistic",
+]
+dependencies = []
+
+[project.scripts]
+ttscnfix = "ttscnfix.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
